@@ -20,7 +20,7 @@ dateTime <- as.POSIXct(paste(power$Date, power$Time),
 
 
 ## open a PNG graphic device
-png(file="plot2")
+png(file="plot2.png")
 
 ## plot the graph
 plot(dateTime, power$Global_active_power, type="l",

@@ -20,7 +20,7 @@ dateTime <- as.POSIXct(paste(power$Date, power$Time),
 
 
 ## open a PNG graphic device
-png()
+png(file="plot1.png")
 
 ## creating the histogramm
 
