@@ -10,11 +10,10 @@ powerdata <- read.csv("household_power_consumption.txt",
 ## subset to a smaller dataset with only the date of 
 ## interest
 
-power <- subset(powerdata, Date== c("2/1/2007","2/2/2007"))
+power <- subset(powerdata, Date== c("1/2/2007","2/2/2007"))
 
-## using lubridate package to convert date and time
-library(lubridate)
-power$Date <- mdy(power$Date)
+## convert date and time
+power$Date <- as.Date(power$Date, format="%d/%m/%Y")
 
 dateTime <- as.POSIXct(paste(power$Date, power$Time), 
                        format="%Y-%m-%d %H:%M:%S")
